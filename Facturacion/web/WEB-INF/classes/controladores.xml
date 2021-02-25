@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE controladores SYSTEM "dtds/controladores.dtd">
+
+<controladores>
+
+    <controlador nombre="Factura">
+    	<accion nombre="verNombreCliente" modo="detail" 
+    		clase="com.gestion400.facturacion.acciones.VerNombreClienteEnFacturas"/>
+    	<accion nombre="verEstado" modo="detail" 
+    		clase="com.gestion400.facturacion.acciones.VerEstadoFactura"/>
+    </controlador>
+
+	<controlador nombre="FacturasPagadas">
+		<hereda-de controlador="Typical"/>
+		<accion nombre="verElementosSeleccionados" modo="list"
+			clase="com.gestion400.facturacion.acciones.VerElementosSeleccionados"/>
+		<accion nombre="verTotal" modo="list"
+			clase="com.gestion400.facturacion.acciones.VerTotal"/>
+	</controlador>
+    
+</controladores>
